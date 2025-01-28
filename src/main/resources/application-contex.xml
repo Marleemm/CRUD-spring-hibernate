@@ -14,9 +14,7 @@
 	
 	<!-- Configuración del escáner de componentes -->
 	<context:component-scan
-		base-package="com.example.mascotas" />
-	<context:component-scan
-		base-package="com.example.controllers" />
+		base-package="com.example" />
 	
 	
 
@@ -70,6 +68,6 @@ mascotaDaoImp.guardar-->
 		<property name="mascotaDaoI" ref="mascotaDaoImp" />
 	</bean>
 
-
+	
 
 </beans>

@@ -86,9 +86,6 @@ mascotaDaoImp.guardar-->
 	<bean id="ControladorMascota" class="com.example.controllers.ControladorMascota">
 		<property name="mascotaS" ref="mascotaService" />
 	</bean>
-	<bean id="ControladorMascotaRest" class="com.example.controllers.Rest">
-		<property name="mascotaS" ref="mascotaService" />
-	</bean>
 	
 
 </beans>

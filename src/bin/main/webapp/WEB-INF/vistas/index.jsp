@@ -4,12 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/recursos/estilos.css">
 <title>home</title>
 </head>
 <body>
-<h1>Hola, registra tu mascota!</h1>
-<a href="registro" class="button">Registro</a>
-
+<h1>Hola mundo</h1>
+<button><a href="registro">Registro</a></button>
 </body>
 </html>

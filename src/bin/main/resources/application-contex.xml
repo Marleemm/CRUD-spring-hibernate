@@ -10,31 +10,19 @@
                            http://www.springframework.org/schema/mvc
                            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+	<!-- CONFIGURACIONES PARA SPRING -->
+	
 	<!-- Configuración del escáner de componentes -->
+	<context:component-scan
+		base-package="com.example.mascotas" />
+	<context:component-scan
+		base-package="com.example.controllers" />
 	
 	
+
+	<!-- Habilitar anotaciones de Spring MVC -->
 	<mvc:annotation-driven />
 
-	<!-- Configuración del manejador de vistas -->
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/vistas/" />
-		<property name="suffix" value=".jsp" />
-	</bean>
-
-
-	<!--decirle a spring donde estan los recursos -->
-
-	<mvc:resources location="/recursos/"
-		mapping="/recursos/**">
-
-
-		<!--mapping significa que cualquier solicitud que comience con /recursos/ 
-			(por ejemplo, /recursos/estilo.css) se dirigirá a los archivos ubicados en 
-			la ruta especificada en location -->
-
-	</mvc:resources>
-	
 	<!-- Configuración de la fuente de datos -->
 	<bean id="dataSource"
 		class="org.apache.commons.dbcp2.BasicDataSource"
@@ -46,8 +34,7 @@
 		<property name="username" value="root" />
 		<property name="password" value="hugo" />
 	</bean>
-	
-	
+
 	<!-- Configuración del SessionFactory para Hibernate 6 -->
 	<bean id="hibernatesessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
@@ -82,13 +69,7 @@ mascotaDaoImp.guardar-->
 		<bean id="mascotaService" class="com.example.service.MascotaService">
 		<property name="mascotaDaoI" ref="mascotaDaoImp" />
 	</bean>
-	
-	<bean id="ControladorMascota" class="com.example.controllers.ControladorMascota">
-		<property name="mascotaS" ref="mascotaService" />
-	</bean>
-	<bean id="ControladorMascotaRest" class="com.example.controllers.Rest">
-		<property name="mascotaS" ref="mascotaService" />
-	</bean>
-	
+
+
 
 </beans>

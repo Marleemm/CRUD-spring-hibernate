@@ -6,12 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Incluir estilos desde la carpeta recursos/css -->
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/recursos/estilos.css">
     <title>Registro</title>
 </head>
 <body>
-     <h1>Agregar mascota</h1>
+     <h1>Formulario para Agregar Mascota</h1>
  <form action="guardarmascota" method="post">
     <input type="text" name="nombre" placeholder="Nombre" required><br/>
     <input type="text" name="descripcion" placeholder="Descripción" required><br/>
